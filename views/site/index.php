@@ -1,28 +1,150 @@
 <?php
 
-/* @var $this yii\web\View */
+/* @var $this app\components\View */
 
-$this->title = 'My Yii Application';
+use app\widgets\Box;
+use machour\adminlte\widgets\Timeline;
+use machour\sparkline\Sparkline;
+
+$this->title = 'Dashboard';
+$this->subTitle = 'Version 2.0';
+
+$this->registerCssFile('plugins/jvectormap/jquery-jvectormap-1.2.2.css');
+$this->registerJsFile('plugins/jvectormap/jquery-jvectormap-1.2.2.min.js', ['depends' => 'yii\web\YiiAsset']);
+$this->registerJsFile('plugins/jvectormap/jquery-jvectormap-world-mill-en.js', ['depends' => 'yii\web\YiiAsset']);
+$this->registerJsFile('plugins/chartjs/Chart.min.js', ['depends' => 'yii\web\YiiAsset']);
+$this->registerJsFile('js/pages/dashboard2.js', ['depends' => 'yii\web\YiiAsset']);
+
 ?>
-<div class="site-index">
 
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application. <?= \machour\sparkline\Sparkline::widget([
-                'data' => [1, 2, 3],
-                'clientOptions' => [
-
-                ]
-            ]); ?></p>
-
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+<div class="row">
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <?= app\widgets\InfoBox::widget([
+            'text' => 'CPU TRAFFIC',
+            'number' => '90%',
+            'icon' => 'gear'
+        ]) ?>
     </div>
 
-    <div class="body-content">
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <?= app\widgets\InfoBox::widget([
+            'bg' => 'bg-red',
+            'icon' => 'google-plus',
+            'text' => 'LIKES',
+            'number' => '41,410',
+        ]) ?>
+    </div>
 
-        <?= \machour\adminlte\widgets\Timeline::widget([
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <?= app\widgets\InfoBox::widget([
+            'bg' => 'bg-green',
+            'icon' => 'shopping-cart',
+            'text' => 'SALES',
+            'number' => '760',
+        ]) ?>
+    </div>
+
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <?= app\widgets\InfoBox::widget([
+            'bg' => 'bg-yellow',
+            'icon' => 'users',
+            'text' => 'NEW MEMBERS',
+            'number' => '2,000',
+        ]) ?>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <?= Box::begin([
+            'type' => 'success',
+            'noPadding' => true,
+            'header' => [
+                'title' => 'Timeline',
+            ]
+        ]) ?>
+        <div class="row">
+            <div class="col-md-9 col-sm-8">
+                <div class="pad">
+                    <!-- Map will be created here -->
+                    <div id="world-map-markers" style="height: 325px;"></div>
+                </div>
+            </div><!-- /.col -->
+            <div class="col-md-3 col-sm-4">
+                <div class="pad box-pane-right bg-green" style="min-height: 280px">
+                    <div class="description-block margin-bottom">
+                        <div class="sparkbar pad" data-color="#fff">90,70,90,70,75,80,70</div>
+                        <h5 class="description-header">8390</h5>
+                        <span class="description-text">Visits</span>
+                    </div><!-- /.description-block -->
+                    <div class="description-block margin-bottom">
+                        <div class="sparkbar pad" data-color="#fff">90,50,90,70,61,83,63</div>
+                        <h5 class="description-header">30%</h5>
+                        <span class="description-text">Referrals</span>
+                    </div><!-- /.description-block -->
+                    <div class="description-block">
+                        <div class="sparkbar pad" data-color="#fff">90,50,90,70,61,83,63</div>
+                        <h5 class="description-header">70%</h5>
+                        <span class="description-text">Organic</span>
+                    </div><!-- /.description-block -->
+                </div>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+        <?= Box::end() ?>
+    </div>
+    <div class="col-md-4">
+        <?= app\widgets\InfoBox::widget([
+            'bg' => 'bg-yellow',
+            'bgFill' => true,
+            'icon' => 'tag',
+            'text' => 'INVENTORY',
+            'number' => '5,200',
+            'progress' => '50',
+            'progressText' => '50% Increase in 30 Days',
+        ]) ?>
+        <?= app\widgets\InfoBox::widget([
+            'bg' => 'bg-green',
+            'bgFill' => true,
+            'icon' => 'heart',
+            'text' => 'MENTIONS',
+            'number' => '92,050',
+            'progress' => '20',
+            'progressText' => '20% Increase in 30 Days',
+        ]) ?>
+        <?= app\widgets\InfoBox::widget([
+            'bg' => 'bg-red',
+            'bgFill' => true,
+            'icon' => 'download',
+            'text' => 'DOWNLOADS',
+            'number' => '114,381',
+            'progress' => '70',
+            'progressText' => '70% Increase in 30 Days',
+        ]) ?>
+        <?= app\widgets\InfoBox::widget([
+            'bg' => 'bg-aqua',
+            'bgFill' => true,
+            'icon' => 'comment',
+            'text' => 'DIRECT MESSAGES',
+            'number' => '163,921',
+            'progress' => '40',
+            'progressText' => '40% Increase in 30 Days',
+        ]) ?>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+
+        <?= Box::begin([
+            'type' => 'info',
+            'header' => [
+                'title' => 'Timeline',
+            ]
+        ]) ?>
+
+
+        <?= Timeline::widget([
             'data' => [
                 ['date' => '12 Juin 2015', 'items' => [
                     [
@@ -40,38 +162,31 @@ $this->title = 'My Yii Application';
                 ]]
             ]
         ]) ?>
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
-        </div>
+        <?= app\widgets\Box::end() ?>
 
     </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <p class="text-center">
+                <strong>Sales: 1 Jan, 2014 - 30 Jul, 2014</strong>
+            </p>
+            <div class="chart">
+                <!-- Sales Chart Canvas -->
+                <canvas id="salesChart" style="height: 180px;"></canvas>
+                <canvas id="pieChart" style="height: 180px;"></canvas>
+            </div><!-- /.chart-responsive -->
+        </div><!-- /.col -->
+    </div>
+    <!--
+        <?= Sparkline::widget([
+                'data' => [1, 2, 3],
+                'clientOptions' => [
+
+                ]
+            ]); ?>
+
+
+    -->
 </div>

@@ -45,6 +45,9 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
+        'view' => [
+            'class' => 'app\components\View',
+        ]
         /*
         'urlManager' => [
             'enablePrettyUrl' => true,
