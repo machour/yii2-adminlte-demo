@@ -47,10 +47,9 @@ class SiteController extends Controller
         ];
     }
 
-    public function actionIndex($view)
+    public function actionIndex($folder = '', $view = 'index2')
     {
-        if (count(explode('/', $view)) > 1) return null;
-        return $this->render($view);
+        return $this->render(ltrim($folder . '/' . $view, '/'));
     }
 
     public function actionLogin()

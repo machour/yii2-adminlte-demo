@@ -10,7 +10,7 @@ $config = [
         'assetManager' => [
             'bundles' => [
                 'dmstr\web\AdminLteAsset' => [
-                    'skin' => 'skin-agendoc',
+                    'skin' => 'skin-blue',
                 ],
             ],
         ],
@@ -52,7 +52,8 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                "<view:\w+>.html" => "site/index",
+                "<folder:\w+>/<view:.+>.html" => "site/index",
+                "<view:.+>.html" => "site/index",
             ],
         ],
 
