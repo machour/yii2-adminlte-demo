@@ -57,7 +57,7 @@
                         'icon' => 'fa fa-pie-chart',
                         'url' => '#',
                         'items' => [
-                            ['label' => 'ChartJS', 'icon' => 'fa fa-circle-o', 'url' => ['site/index', 'folder' => 'charts', 'view' => 'chartsjs']],
+                            ['label' => 'ChartJS', 'icon' => 'fa fa-circle-o', 'url' => ['site/index', 'folder' => 'charts', 'view' => 'chartjs']],
                             ['label' => 'Morris', 'icon' => 'fa fa-circle-o', 'url' => ['site/index', 'folder' => 'charts', 'view' => 'morris']],
                             ['label' => 'Flot', 'icon' => 'fa fa-circle-o', 'url' => ['site/index', 'folder' => 'charts', 'view' => 'flot']],
                             ['label' => 'Inline charts', 'icon' => 'fa fa-circle-o', 'url' => ['site/index', 'folder' => 'charts', 'view' => 'inline']],

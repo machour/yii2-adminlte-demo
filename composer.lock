@@ -4,8 +4,68 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2eb70de23d476521984523c1540314c7",
+    "hash": "845a0713ee968f320c27f1123dcd3be4",
     "packages": [
+        {
+            "name": "2amigos/yii2-chartjs-widget",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/2amigos/yii2-chartjs-widget.git",
+                "reference": "6637e1559cb4b365fcc3966e1776a67f03ba6c2a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/2amigos/yii2-chartjs-widget/zipball/6637e1559cb4b365fcc3966e1776a67f03ba6c2a",
+                "reference": "6637e1559cb4b365fcc3966e1776a67f03ba6c2a",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/chartjs": "1.0.2",
+                "yiisoft/yii2": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "asset-installer-paths": {
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "dosamigos\\chartjs\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "2amigOS! Consulting Group",
+                    "email": "hola@2amigos.us",
+                    "homepage": "http://2amigos.us",
+                    "role": "Developer"
+                }
+            ],
+            "description": "ChartJs widget for Yii2.",
+            "homepage": "http://yiiwheels.com/extension/chartjs-widget",
+            "keywords": [
+                "2amigos",
+                "chartjs",
+                "extension",
+                "widget",
+                "yii",
+                "yii 2",
+                "yii2"
+            ],
+            "time": "2015-03-18 13:16:41"
+        },
         {
             "name": "almasaeed2010/adminlte",
             "version": "v2.3.0",
@@ -130,6 +190,28 @@
                 "jquery",
                 "sparkline"
             ]
+        },
+        {
+            "name": "bower-asset/chartjs",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nnnick/Chart.js.git",
+                "reference": "930b16a0af59201dcfcd1594b0e7540db4d04c9f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nnnick/Chart.js/zipball/930b16a0af59201dcfcd1594b0e7540db4d04c9f",
+                "reference": "930b16a0af59201dcfcd1594b0e7540db4d04c9f",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "Chart.js"
+                ]
+            },
+            "description": "Simple HTML5 Charts using the canvas element"
         },
         {
             "name": "bower-asset/fontawesome",
@@ -720,7 +802,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/e63916c82f24d0254b24cb7acc5368a6479f045e",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/53e1cc3ff9e0980e25a04e48b57786bb5b0fddf9",
                 "reference": "c76e0f9840c6ca014eda2f7acffc1c70a053eef9",
                 "shasum": ""
             },
@@ -809,7 +891,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/49c2d45951dd2e98c6217aa071f655016c706846",
+                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/7c6b244d9cfd58a5a10cad9853edc090ffd479b1",
                 "reference": "49c2d45951dd2e98c6217aa071f655016c706846",
                 "shasum": ""
             },
@@ -985,7 +1067,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/1003a5797573bfdc3c290d666e6fafef9b2f7f62",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/9198c2f7668b9ee494959f8ff7f5f6e6f65379ca",
                 "reference": "f34c8c30513eb8ba5cd73021c567a0030a6cf547",
                 "shasum": ""
             },
@@ -1208,7 +1290,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/fbd134b1cbc06fa149cc546cc98b4e701ba08cb0",
+                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/3946123b429ef6aa95618a4159f3c0360054ddec",
                 "reference": "fbd134b1cbc06fa149cc546cc98b4e701ba08cb0",
                 "shasum": ""
             },

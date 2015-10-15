@@ -22,7 +22,8 @@
         "rmrevin/yii2-fontawesome": "~2.9",
         "dmstr/yii2-adminlte-asset": "2.*",
         "machour/yii2-sparkline": "dev-master",
-        "machour/yii2-adminlte-widgets": "dev-master"
+        "machour/yii2-adminlte-widgets": "dev-master",
+        "2amigos/yii2-chartjs-widget": "~2.0"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
