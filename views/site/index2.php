@@ -5,6 +5,7 @@
 use app\widgets\Box;
 use machour\adminlte\widgets\Timeline;
 use machour\sparkline\Sparkline;
+use yii\bootstrap\Carousel;
 
 $this->title = 'Dashboard';
 $this->subTitle = 'Version 2.0';
@@ -54,6 +55,26 @@ $this->registerJsFile('js/pages/dashboard2.js', ['depends' => 'yii\web\YiiAsset'
     </div>
 
 </div>
+
+<?php
+
+echo Carousel::widget([
+    'items' => [
+        // the item contains only the image
+        '<img src="http://placehold.it/900x500/f39c12/ffffff&text=I+Love+Bootstrap"/>',
+        // equivalent to the above
+        ['content' => '<img src="http://placehold.it/900x500/ff0000/ffffff&text=I+Love+Bootstrap"/>'],
+        // the item contains both the image and the caption
+        [
+            'content' => '<img src="http://placehold.it/900x500/ffcc00/ffffff&text=I+Love+Bootstrap"/>',
+            'caption' => '<h4>This is title</h4><p>This is the caption text</p>',
+            'options' => [],
+        ],
+    ],
+    'controls' => ['<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>'],
+]);
+
+?>
 
 <div class="row">
     <div class="col-md-8">

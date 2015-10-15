@@ -9,7 +9,7 @@ use yii\helpers\Html;
 class Box extends Widget {
 
     public static $config = [
-        'type' => 'default',
+        'type' => 'solid',
         'noPadding' => false,
         'header' => [
             'title' => '',

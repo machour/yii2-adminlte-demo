@@ -26,7 +26,7 @@ $config = [
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'site/index',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
@@ -47,15 +47,15 @@ $config = [
         'db' => require(__DIR__ . '/db.php'),
         'view' => [
             'class' => 'app\components\View',
-        ]
-        /*
+        ],
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                "<view:\w+>.html" => "site/index",
             ],
         ],
-        */
+
     ],
     'params' => $params,
 ];
