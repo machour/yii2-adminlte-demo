@@ -73,7 +73,7 @@
                             ['label' => 'Buttons', 'icon' => 'fa fa-circle-o', 'url' => ['site/index', 'folder' => 'UI', 'view' => 'buttons']],
                             ['label' => 'Sliders', 'icon' => 'fa fa-circle-o', 'url' => ['site/index', 'folder' => 'UI', 'view' => 'sliders']],
                             ['label' => 'Timeline', 'icon' => 'fa fa-circle-o', 'url' => ['site/index', 'folder' => 'UI', 'view' => 'timeline']],
-                            ['label' => 'Modals', 'icon' => 'fa fa-circle-o', 'url' => ['site/index', 'folder' => 'UI', 'view' => 'modal']],
+                            ['label' => 'Modals', 'icon' => 'fa fa-circle-o', 'url' => ['site/index', 'folder' => 'UI', 'view' => 'modals']],
                         ],
                     ],
                     [
