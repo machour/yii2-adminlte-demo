@@ -2,6 +2,7 @@
 
 /* @var $this app\components\View */
 
+use app\widgets\Callout;
 use yii\bootstrap\Modal;
 
 $this->title = 'Modals';
@@ -24,7 +25,14 @@ $this->registerCss(<<<CSS
 CSS
 );
 
+
 ?>
+
+    <?= Callout::begin(['type' => 'info']) ?>
+    <h4>Reminder!</h4>
+    Instructions for how to use modals are available on the
+    <a href="http://getbootstrap.com/javascript/#modals">Bootstrap documentation</a>
+    <?= Callout::end() ?>
 
     <div class="example-modal">
 <?php

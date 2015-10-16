@@ -54,18 +54,23 @@ DEPENDENCIES
 
 This template use several libraries in order to mimic AdminLTE behavior, here's a list:
 
+
+Application level:
+
+* [dmstr/yii2-adminlte-asset](https://github.com/dmstr/yii2-adminlte-asset)
+
 UI/sliders.html:
 
-* ekaragodin/yii2-bootstrap-slider
-* yii2mod/yii2-ion-slider
+* [ekaragodin/yii2-bootstrap-slider](https://github.com/ekaragodin/yii2-bootstrap-slider)
+* [yii2mod/yii2-ion-slider](https://github.com/yii2mod/yii2-ion-slider)
 
 charts/chartjs.html
 
-* 2amigos/yii2-chartjs-widget
+* [2amigos/yii2-chartjs-widget](https://github.com/2amigos/yii2-chartjs-widget)
 
 charts/inline.html
 
-* machour/yii2-sparkline
+* [machour/yii2-sparkline](https://github.com/machour/yii2-sparkline)
 
 
 TODO
@@ -105,7 +110,6 @@ Add these pages :
 * index2.html
 * UI/general.html
 * UI/timeline.html
-* UI/modals.html
 
 
 CONFIGURATION
