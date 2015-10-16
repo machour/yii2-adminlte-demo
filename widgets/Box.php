@@ -9,10 +9,11 @@ use yii\helpers\Html;
 class Box extends Widget {
 
     public static $config = [
-        'type' => 'solid',
+        'type' => 'box-solid',
         'noPadding' => false,
         'header' => [
             'title' => '',
+            'class' => '',
             'baseOptions' => [
                 'collapse' => true,
                 'remove' => true,
@@ -25,11 +26,11 @@ class Box extends Widget {
 
         self::$config = ArrayHelper::merge(self::$config, $config);
 
-        echo Html::beginTag('div', ['class' => 'box box-' . self::$config['type']]);
+        echo Html::beginTag('div', ['class' => 'box ' . self::$config['type']]);
 
         if (!empty(self::$config['header']['title'])) {
             $header = self::$config['header'];
-            echo Html::beginTag('div', ['class' => 'box-header']);
+            echo Html::beginTag('div', ['class' => 'box-header ' . $header['class']]);
 
             if (!empty($header['title'])) {
                 echo Html::tag('h3', Html::encode($header['title']), ['class' => 'box-title']);
