@@ -12,6 +12,13 @@ $config = [
                 'dmstr\web\AdminLteAsset' => [
                     'skin' => 'skin-blue',
                 ],
+                'yii2mod\slider\IonSliderAsset' => [
+                    'css' => [
+                        'css/normalize.css',
+                        'css/ion.rangeSlider.css',
+                        'css/ion.rangeSlider.skinNice.css',
+                    ]
+                ],
             ],
         ],
         'request' => [

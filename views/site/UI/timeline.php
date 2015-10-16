@@ -5,7 +5,6 @@
 use app\widgets\Box;
 use machour\adminlte\widgets\Timeline;
 use machour\sparkline\Sparkline;
-use yii\bootstrap\Carousel;
 
 $this->title = 'Timeline';
 $this->subTitle = 'example';

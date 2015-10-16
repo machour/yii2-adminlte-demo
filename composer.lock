@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "845a0713ee968f320c27f1123dcd3be4",
+    "hash": "dd62bbefa1f52d1aca06239775ed65e7",
     "packages": [
         {
             "name": "2amigos/yii2-chartjs-widget",
@@ -249,6 +249,51 @@
                 "CC-BY-3.0"
             ],
             "description": "Font Awesome"
+        },
+        {
+            "name": "bower-asset/ion.rangeSlider",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/IonDen/ion.rangeSlider.git",
+                "reference": "83f68c9de99b7900ece71a789e01846edd54704a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/IonDen/ion.rangeSlider/zipball/83f68c9de99b7900ece71a789e01846edd54704a",
+                "reference": "83f68c9de99b7900ece71a789e01846edd54704a",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jquery": ">=1.8"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "js/ion.rangeSlider.js",
+                    "css/ion.rangeSlider.css",
+                    "css/ion.rangeSlider.skinFlat.css",
+                    "img/sprite-skin-flat.png"
+                ],
+                "bower-asset-ignore": [
+                    "PSD",
+                    "ion-rangeSlider.jquery.json"
+                ],
+                "branch-alias": {
+                    "dev-master": "2.1.2-dev"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Powerful range slider with skin support",
+            "keywords": [
+                "diapason",
+                "ion",
+                "jquery-plugin",
+                "range",
+                "slider"
+            ]
         },
         {
             "name": "bower-asset/jquery",
@@ -568,6 +613,47 @@
             "time": "2015-09-10 12:17:21"
         },
         {
+            "name": "ekaragodin/yii2-bootstrap-slider",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ekaragodin/yii2-bootstrap-slider.git",
+                "reference": "842bcc63f957b8fb12e3ba6790285b66d4b72303"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ekaragodin/yii2-bootstrap-slider/zipball/842bcc63f957b8fb12e3ba6790285b66d4b72303",
+                "reference": "842bcc63f957b8fb12e3ba6790285b66d4b72303",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2-bootstrap": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "ekaragodin\\bootstrap\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "ekaragodin",
+                    "email": "ekaragodin@gmail.com"
+                }
+            ],
+            "description": "Bootstrap slider control",
+            "keywords": [
+                "bootstrap",
+                "extension",
+                "yii2"
+            ],
+            "time": "2014-04-01 11:24:45"
+        },
+        {
             "name": "ezyang/htmlpurifier",
             "version": "v4.6.0",
             "source": {
@@ -791,6 +877,46 @@
                 "mailer"
             ],
             "time": "2015-09-04 05:47:20"
+        },
+        {
+            "name": "yii2mod/yii2-ion-slider",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yii2mod/yii2-ion-slider.git",
+                "reference": "c4ca563ff598eb9097a5a05d5db3e4d75c46dc4d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yii2mod/yii2-ion-slider/zipball/c4ca563ff598eb9097a5a05d5db3e4d75c46dc4d",
+                "reference": "c4ca563ff598eb9097a5a05d5db3e4d75c46dc4d",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/ion.rangeslider": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "yii2mod\\slider\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Igor Chepurnoy",
+                    "email": "igorzfort@gmail.com"
+                }
+            ],
+            "description": "Ion Slider widget based on Ion.RangeSlider extension {@link http://ionden.com/a/plugins/ion.rangeSlider/en.html)",
+            "keywords": [
+                "module",
+                "yii2"
+            ],
+            "time": "2015-06-17 09:40:49"
         },
         {
             "name": "yiisoft/yii2",
