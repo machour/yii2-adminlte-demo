@@ -8,6 +8,7 @@ DIRECTORY STRUCTURE
 
       assets/             contains assets definition
       commands/           contains console commands (controllers)
+      components/         contains the template customized components
       config/             contains application configurations
       controllers/        contains Web controller classes
       mail/               contains view files for e-mails
@@ -17,7 +18,7 @@ DIRECTORY STRUCTURE
       vendor/             contains dependent 3rd-party packages
       views/              contains view files for the Web application
       web/                contains the entry script and Web resources
-
+      widgets/            contains the widgets used by this template
 
 
 REQUIREMENTS
@@ -47,6 +48,64 @@ directly under the Web root.
 ~~~
 http://localhost/adminlte/web/
 ~~~
+
+DEPENDENCIES
+------------
+
+This template use several libraries in order to mimic AdminLTE behavior, here's a list:
+
+UI/sliders.html:
+
+* ekaragodin/yii2-bootstrap-slider
+* yii2mod/yii2-ion-slider
+
+charts/chartjs.html
+
+* 2amigos/yii2-chartjs-widget
+
+charts/inline.html
+
+* machour/yii2-sparkline
+
+
+TODO
+----
+
+Add these pages :
+
+* index.html
+* layout/top-nav.html
+* layout/boxed.html
+* layout/fixed.html
+* layout/collapsed-sidebar.html
+* widgets.html
+* charts/morris.html
+* charts/flot.html
+* charts/inline.html
+* UI/icons.html
+* UI/buttons.html
+* forms/general.html
+* forms/advanced.html
+* forms/editors.html
+* tables/simple.html
+* tables/data.html
+* calendar.html
+* mailbox.html
+* examples/invoice.html
+* examples/profile.html
+* examples/login.html
+* examples/register.html
+* examples/lockscreen.html
+* examples/404.html
+* examples/500.html
+* examples/blank.html
+
+.. and finish the following pages :
+
+* index2.html
+* UI/general.html
+* UI/timeline.html
+* UI/modals.html
 
 
 CONFIGURATION
