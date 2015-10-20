@@ -1,6 +1,6 @@
 <?php
 use yii\helpers\Html;
-use yii\widgets\Breadcrumbs;
+use app\widgets\Breadcrumbs;
 use dmstr\widgets\Alert;
 
 ?>
