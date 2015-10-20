@@ -20,6 +20,9 @@ trait BoxTrait {
                 'remove' => true,
             ]
         ],
+        'body' => [
+            'class' => ''
+        ],
         'footer' => '',
     ];
 
@@ -53,7 +56,8 @@ trait BoxTrait {
             echo Html::endTag('div');
         }
 
-        $class = 'box-body';
+        $class = 'box-body ';
+        $class .= self::$boxConfig['body']['class'];
         if (self::$boxConfig['noPadding']) {
             $class .= ' no-padding';
         }
