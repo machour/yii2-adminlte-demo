@@ -47,9 +47,9 @@ class SiteController extends Controller
         ];
     }
 
-    public function actionIndex($folder = '', $view = 'index2')
+    public function actionIndex($folder = '', $view = 'index2', $subfolder = '')
     {
-        return $this->render(ltrim($folder . '/' . $view, '/'));
+        return $this->render(ltrim($folder . '/' . $subfolder . '/' . $view, '/'));
     }
 
     public function actionLogin()
