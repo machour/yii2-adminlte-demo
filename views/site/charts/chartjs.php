@@ -2,8 +2,7 @@
 
 /* @var $this app\components\View */
 
-use app\widgets\Box;
-use dosamigos\chartjs\ChartJs;
+use app\widgets\ChartJs;
 
 $this->title = 'ChartJS';
 $this->subTitle = 'Preview sample';
@@ -170,63 +169,54 @@ $barChartOptions = [
 
 <div class="row">
     <div class="col-md-6">
-        <?= Box::begin([
-            'type' => 'info',
-            'header' => [
-                'title' => 'Area Chart',
-            ]
-        ]) ?>
         <div class="chart">
         <?= ChartJs::widget([
+            'box' => [
+                'type' => 'box-primary',
+                'header' => [
+                    'title' => 'Area Chart',
+                ]
+            ],
             'type' => 'Line',
             'data' => $areaChartData,
             'clientOptions' => $areaChartOptions,
         ]);
         ?>
         </div>
-        <?= app\widgets\Box::end() ?>
-        <?= Box::begin([
-            'type' => 'danger',
-            'header' => [
-                'title' => 'Donut Chart',
-            ]
-        ]) ?>
         <div class="chart">
             <?= ChartJs::widget([
+                'box' => [
+                    'type' => 'box-danger',
+                    'header' => [
+                        'title' => 'Donut Chart',
+                    ]
+                ],
                 'type' => 'Doughnut',
                 'data' => $pieData,
                 'clientOptions' => $pieOptions,
             ]);
             ?>
         </div>
-        <?= app\widgets\Box::end() ?>
     </div>
     <div class="col-md-6">
-        <?= Box::begin([
-            'type' => 'info',
-            'header' => [
-                'title' => 'Line Chart',
-            ]
-        ]) ?>
         <?php
         $lineChartOptions = $areaChartOptions;
         $lineChartOptions['datasetFill'] = false;
         ?>
         <div class="chart">
         <?= ChartJs::widget([
+            'box' => [
+                'type' => 'box-info',
+                'header' => [
+                    'title' => 'Line Chart',
+                ]
+            ],
             'type' => 'Line',
             'data' => $areaChartData,
             'clientOptions' => $lineChartOptions,
         ]);
         ?>
         </div>
-        <?= app\widgets\Box::end() ?>
-        <?= Box::begin([
-            'type' => 'success',
-            'header' => [
-                'title' => 'Bar Chart',
-            ]
-        ]) ?>
         <?php
         $barChartData = $areaChartData;
         $barChartData['datasets'][1]['fillColor'] = '#00a65a';
@@ -235,12 +225,17 @@ $barChartOptions = [
         ?>
         <div class="chart">
             <?= ChartJs::widget([
+                'box' => [
+                    'type' => 'box-success',
+                    'header' => [
+                        'title' => 'Bar Chart',
+                    ]
+                ],
                 'type' => 'Bar',
                 'data' => $barChartData,
                 'clientOptions' => $barChartOptions,
             ]);
             ?>
         </div>
-        <?= app\widgets\Box::end() ?>
     </div>
 </div>
