@@ -64,11 +64,28 @@ trait BoxTrait {
         echo Html::beginTag('div', ['class' => $class]);
     }
 
-    public static function boxEnd() {
+    static $footerUsed = false;
+    public static function footer() {
+        self::$footerUsed = true;
         echo Html::endTag('div');
         if (!empty(self::$boxConfig['footer'])) {
             echo Html::beginTag('div', ['class' => 'box-footer']);
             echo self::$boxConfig['footer'];
+            echo Html::endTag('div');
+        } else {
+            echo Html::beginTag('div', ['class' => 'box-footer']);
+        }
+    }
+
+    public static function boxEnd() {
+        if (!self::$footerUsed) {
+            echo Html::endTag('div');
+            if (!empty(self::$boxConfig['footer'])) {
+                echo Html::beginTag('div', ['class' => 'box-footer']);
+                echo self::$boxConfig['footer'];
+                echo Html::endTag('div');
+            }
+        } elseif (empty(self::$boxConfig['footer'])) {
             echo Html::endTag('div');
         }
         echo Html::endTag('div');
