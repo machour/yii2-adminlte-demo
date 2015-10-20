@@ -25,7 +25,8 @@
         "machour/yii2-adminlte-widgets": "dev-master",
         "2amigos/yii2-chartjs-widget": "~2.0",
         "yii2mod/yii2-ion-slider": "*",
-        "ekaragodin/yii2-bootstrap-slider": "*"
+        "ekaragodin/yii2-bootstrap-slider": "*",
+        "yiisoft/yii2-jui": "^2.0@dev"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

@@ -95,8 +95,13 @@
                             ['label' => 'Data tables', 'icon' => 'fa fa-circle-o', 'url' => ['site/index', 'folder' => 'tables', 'view' => 'data']],
                         ],
                     ],
-                    ['label' => 'Calendar', 'icon' => 'fa fa-calendar', 'url' => ['site/index', 'view' => 'calendar']],
-                    ['label' => 'Mailbox', 'icon' => 'fa fa-envelope', 'url' => ['site/index', 'view' => 'mailbox']],
+                    ['label' => 'Calendar', 'icon' => 'fa fa-calendar', 'url' => ['site/index', 'view' => 'calendar', 'folder' => 'pages']],
+                    ['label' => 'Mailbox', 'icon' => 'fa fa-envelope', 'url' => ['site/index', 'view' => 'mailbox', 'folder' => 'pages', 'subfolder' => 'mailbox'], 'items' => [
+                        ['label' => 'Inbox', 'icon' => 'fa fa-circle-o', 'url' => ['site/index', 'view' => 'mailbox', 'folder' => 'pages', 'subfolder' => 'mailbox']],
+                        ['label' => 'Compose', 'icon' => 'fa fa-circle-o', 'url' => ['site/index', 'view' => 'compose', 'folder' => 'pages', 'subfolder' => 'mailbox']],
+                        ['label' => 'Read', 'icon' => 'fa fa-circle-o', 'url' => ['site/index', 'view' => 'read-mail', 'folder' => 'pages', 'subfolder' => 'mailbox']],
+
+                    ]],
                     [
                         'label' => 'Examples',
                         'icon' => 'fa fa-folder',

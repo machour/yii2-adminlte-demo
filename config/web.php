@@ -59,6 +59,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                "<folder:\w+>/<subfolder:\w+>/<view:.+>.html" => "site/index",
                 "<folder:\w+>/<view:.+>.html" => "site/index",
                 "<view:.+>.html" => "site/index",
             ],
