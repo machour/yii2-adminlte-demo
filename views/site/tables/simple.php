@@ -60,5 +60,60 @@ $columns = [
             'data' => $models,
             'columns' => $columns
         ]) ?>
+        <?= Table::widget([
+            'box' => [
+                'type' => 'primary',
+                'header' => [
+                    'title' => 'Condensed Full Width Table',
+                ],
+                'noPadding' => true,
+            ],
+            'type' => 'table-condensed',
+            'data' => $models,
+            'columns' => $columns
+        ]) ?>
+    </div><!-- /.col -->
+    <div class="col-xs-6">
+        <?= Table::widget([
+            'box' => [
+                'type' => 'primary',
+                'header' => [
+                    'title' => 'Simple Full Width Table',
+                ],
+                'noPadding' => true,
+            ],
+            'data' => $models,
+            'columns' => $columns
+        ]) ?>
+        <?= Table::widget([
+            'box' => [
+                'type' => 'primary',
+                'header' => [
+                    'title' => 'Striped Full Width Table',
+                ],
+                'noPadding' => true,
+            ],
+            'type' => 'table-striped',
+            'data' => $models,
+            'columns' => $columns
+        ]) ?>
     </div><!-- /.col -->
 </div><!-- /.row -->
+
+<div class="row">
+    <div class="col-xs-12">
+        <?= Table::widget([
+            'box' => [
+                'type' => 'primary',
+                'header' => [
+                    'title' => 'Striped Full Width Table',
+                ],
+                'noPadding' => true,
+            ],
+            'responsive' => true,
+            'type' => 'table-striped',
+            'data' => $models,
+            'columns' => $columns
+        ]) ?>
+    </div>
+</div>
