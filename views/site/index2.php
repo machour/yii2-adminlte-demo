@@ -2,18 +2,53 @@
 
 /* @var $this app\components\View */
 
+use app\components\Html;
 use app\widgets\Box;
-use machour\adminlte\widgets\Timeline;
+use app\widgets\Table;
+use app\widgets\Timeline;
 use machour\sparkline\Sparkline;
 
 $this->title = 'Dashboard';
 $this->subTitle = 'Version 2.0';
 
-$this->registerCssFile('plugins/jvectormap/jquery-jvectormap-1.2.2.css');
-$this->registerJsFile('plugins/jvectormap/jquery-jvectormap-1.2.2.min.js', ['depends' => 'yii\web\YiiAsset']);
-$this->registerJsFile('plugins/jvectormap/jquery-jvectormap-world-mill-en.js', ['depends' => 'yii\web\YiiAsset']);
-$this->registerJsFile('plugins/chartjs/Chart.min.js', ['depends' => 'yii\web\YiiAsset']);
+$this->params['breadcrumbs'] = [
+    'Dashboard',
+];
+
+$this->registerCssFile('/plugins/jvectormap/jquery-jvectormap-1.2.2.css');
+$this->registerJsFile('/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js', ['depends' => 'yii\web\YiiAsset']);
+$this->registerJsFile('/plugins/jvectormap/jquery-jvectormap-world-mill-en.js', ['depends' => 'yii\web\YiiAsset']);
+$this->registerJsFile('/plugins/chartjs/Chart.min.js', ['depends' => 'yii\web\YiiAsset']);
 $this->registerJsFile('js/pages/dashboard2.js', ['depends' => 'yii\web\YiiAsset']);
+
+
+$data = [
+    ['OR9842', 'Call of Duty IV', 'Shipped', 'success', [90,80,90,-70,61,-83,63], '#00a65a'],
+    ['OR1848', 'Samsung Smart TV', 'Pending', 'warning', [90,80,-90,70,61,-83,68], '#f39c12'],
+    ['OR7429', 'iPhone 6 Plus', 'Delivered', 'danger', [90,-80,90,70,-61,83,63], '#f56954'],
+    ['OR7429', 'Samsung Smart TV', 'Processing', 'info', [90,80,-90,70,-61,83,63], '#00c0ef'],
+    ['OR1848', 'Samsung Smart TV', 'Pending', 'warning', [90,80,-90,70,61,-83,68], '#f39c12'],
+    ['OR7429', 'iPhone 6 Plus', 'Delivered', 'danger', [90,-80,90,70,-61,83,63], '#f56954'],
+    ['OR9842', 'Call of Duty IV', 'Shipped', 'success', [90,80,90,-70,61,-83,63], '#00a65a'],
+];
+
+$models = [];
+
+foreach ($data as $datum) {
+    $models[] = [
+        'Order ID' => Html::a($datum[0], ['site/index']),
+        'Item' => $datum[1],
+        'Status' => Html::aLabel($datum[2], $datum[3]),
+        'Popularity' => Sparkline::widget(['clientOptions' => ['type' => 'bar', 'height' => 20, 'barColor' => $datum[5]], 'data' => $datum[4]]), // Html::badge($datum[1] . '%', 'bg-' . $datum[3]),
+    ];
+}
+
+$columns = [
+    'Order ID:html',
+    'Item',
+    'Status:html',
+    'Popularity:raw',
+];
 
 ?>
 
@@ -136,15 +171,13 @@ $this->registerJsFile('js/pages/dashboard2.js', ['depends' => 'yii\web\YiiAsset'
 <div class="row">
     <div class="col-md-12">
 
-        <?= Box::begin([
-            'type' => 'info',
-            'header' => [
-                'title' => 'Timeline',
-            ]
-        ]) ?>
-
-
         <?= Timeline::widget([
+            'box' => [
+                'type' => 'info',
+                'header' => [
+                    'title' => 'Timeline',
+                ]
+            ],
             'data' => [
                 ['date' => '12 Juin 2015', 'items' => [
                     [
@@ -163,30 +196,25 @@ $this->registerJsFile('js/pages/dashboard2.js', ['depends' => 'yii\web\YiiAsset'
             ]
         ]) ?>
 
-        <?= app\widgets\Box::end() ?>
-
     </div>
 
-    <div class="row">
-        <div class="col-md-8">
-            <p class="text-center">
-                <strong>Sales: 1 Jan, 2014 - 30 Jul, 2014</strong>
-            </p>
-            <div class="chart">
-                <!-- Sales Chart Canvas -->
-                <canvas id="salesChart" style="height: 180px;"></canvas>
-                <canvas id="pieChart" style="height: 180px;"></canvas>
-            </div><!-- /.chart-responsive -->
-        </div><!-- /.col -->
-    </div>
-    <!--
-        <?= Sparkline::widget([
-                'data' => [1, 2, 3],
-                'clientOptions' => [
-
-                ]
-            ]); ?>
-
-
-    -->
 </div>
+
+<div class="row">
+    <div class="col-md-8">
+        <?= Table::widget([
+            'box' => [
+                'type' => 'box-info',
+                'header' => [
+                    'title' => 'Latest Orders',
+                ],
+                'noPadding' => true,
+            ],
+            'responsive' => true,
+            'type' => 'table-striped',
+            'data' => $models,
+            'columns' => $columns
+        ]) ?>
+    </div>
+</div>
+
