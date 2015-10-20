@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dd62bbefa1f52d1aca06239775ed65e7",
+    "hash": "d61c51f61bc46e2993bbb767365e31fc",
     "packages": [
         {
             "name": "2amigos/yii2-chartjs-widget",
@@ -341,16 +341,16 @@
         },
         {
             "name": "bower-asset/jquery.inputmask",
-            "version": "3.1.63",
+            "version": "3.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RobinHerbots/jquery.inputmask.git",
-                "reference": "c40c7287eadc31e341ebbf0c02352eb55b9cbc48"
+                "reference": "ebceb88a131e1fbc159733a88a6778ffc02debab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/c40c7287eadc31e341ebbf0c02352eb55b9cbc48",
-                "reference": "c40c7287eadc31e341ebbf0c02352eb55b9cbc48",
+                "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/ebceb88a131e1fbc159733a88a6778ffc02debab",
+                "reference": "ebceb88a131e1fbc159733a88a6778ffc02debab",
                 "shasum": ""
             },
             "require": {
@@ -359,12 +359,22 @@
             "type": "bower-asset-library",
             "extra": {
                 "bower-asset-main": [
+                    "./dist/inputmask/inputmask.dependencyLib.jquery.js",
+                    "./dist/inputmask/inputmask.js",
+                    "./dist/inputmask/inputmask.extensions.js",
+                    "./dist/inputmask/inputmask.date.extensions.js",
+                    "./dist/inputmask/inputmask.numeric.extensions.js",
+                    "./dist/inputmask/inputmask.phone.extensions.js",
+                    "./dist/inputmask/inputmask.regex.extensions.js",
                     "./dist/inputmask/jquery.inputmask.js",
-                    "./dist/inputmask/jquery.inputmask.extensions.js",
-                    "./dist/inputmask/jquery.inputmask.date.extensions.js",
-                    "./dist/inputmask/jquery.inputmask.numeric.extensions.js",
-                    "./dist/inputmask/jquery.inputmask.phone.extensions.js",
-                    "./dist/inputmask/jquery.inputmask.regex.extensions.js"
+                    "./dist/jquery.inputmask.bundle.js",
+                    "./extra/dependencyLibs/inputmask.dependencyLib.jqlite.js",
+                    "./extra/dependencyLibs/inputmask.dependencyLib.js",
+                    "./extra/phone-codes/phone-be.js",
+                    "./extra/phone-codes/phone-codes.js",
+                    "./extra/phone-codes/phone-nl.js",
+                    "./extra/phone-codes/phone-ru.js",
+                    "./extra/phone-codes/phone-uk.js"
                 ],
                 "bower-asset-ignore": [
                     "**/.*",
@@ -560,16 +570,16 @@
         },
         {
             "name": "dmstr/yii2-adminlte-asset",
-            "version": "2.2.1",
+            "version": "2.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dmstr/yii2-adminlte-asset.git",
-                "reference": "769f9a12307753856a509720573f98cb378703e4"
+                "reference": "45cffbfe90d79f3c405b4cc98f7f318ae372bb10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dmstr/yii2-adminlte-asset/zipball/769f9a12307753856a509720573f98cb378703e4",
-                "reference": "769f9a12307753856a509720573f98cb378703e4",
+                "url": "https://api.github.com/repos/dmstr/yii2-adminlte-asset/zipball/45cffbfe90d79f3c405b4cc98f7f318ae372bb10",
+                "reference": "45cffbfe90d79f3c405b4cc98f7f318ae372bb10",
                 "shasum": ""
             },
             "require": {
@@ -610,7 +620,7 @@
                 "extension",
                 "yii2"
             ],
-            "time": "2015-09-10 12:17:21"
+            "time": "2015-10-07 21:31:26"
         },
         {
             "name": "ekaragodin/yii2-bootstrap-slider",
@@ -736,12 +746,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/machour/yii2-sparkline.git",
-                "reference": "a6978cd93289c661335d33997175f28fe16313bb"
+                "reference": "e1a7f2d8548d875054639f254bc2243480cf1ca3"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/machour/yii2-sparkline/zipball/e1a7f2d8548d875054639f254bc2243480cf1ca3",
-                "reference": "a6978cd93289c661335d33997175f28fe16313bb",
+                "reference": "e1a7f2d8548d875054639f254bc2243480cf1ca3",
                 "shasum": ""
             },
             "require": {
@@ -749,6 +759,14 @@
                 "yiisoft/yii2": "*"
             },
             "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "asset-installer-paths": {
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "machour\\sparkline\\": ""
@@ -771,7 +789,7 @@
                 "sparkline",
                 "yii2"
             ],
-            "time": "2015-10-02 18:59:26"
+            "time": "2015-10-02 19:13:01"
         },
         {
             "name": "rmrevin/yii2-fontawesome",
@@ -884,12 +902,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii2mod/yii2-ion-slider.git",
-                "reference": "c4ca563ff598eb9097a5a05d5db3e4d75c46dc4d"
+                "reference": "3ef55b29a9f6a20be62d47b890a1e155d3d01590"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2mod/yii2-ion-slider/zipball/c4ca563ff598eb9097a5a05d5db3e4d75c46dc4d",
-                "reference": "c4ca563ff598eb9097a5a05d5db3e4d75c46dc4d",
+                "url": "https://api.github.com/repos/yii2mod/yii2-ion-slider/zipball/3ef55b29a9f6a20be62d47b890a1e155d3d01590",
+                "reference": "3ef55b29a9f6a20be62d47b890a1e155d3d01590",
                 "shasum": ""
             },
             "require": {
@@ -916,7 +934,7 @@
                 "module",
                 "yii2"
             ],
-            "time": "2015-06-17 09:40:49"
+            "time": "2015-10-19 13:49:15"
         },
         {
             "name": "yiisoft/yii2",
@@ -924,17 +942,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "c76e0f9840c6ca014eda2f7acffc1c70a053eef9"
+                "reference": "f2321a2acfc6bbd79bc78c380050ec71e7153b57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/53e1cc3ff9e0980e25a04e48b57786bb5b0fddf9",
-                "reference": "c76e0f9840c6ca014eda2f7acffc1c70a053eef9",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/f2321a2acfc6bbd79bc78c380050ec71e7153b57",
+                "reference": "f2321a2acfc6bbd79bc78c380050ec71e7153b57",
                 "shasum": ""
             },
             "require": {
                 "bower-asset/jquery": "2.1.*@stable | 1.11.*@stable",
-                "bower-asset/jquery.inputmask": "3.1.*",
+                "bower-asset/jquery.inputmask": "~3.2.2",
                 "bower-asset/punycode": "1.3.*",
                 "bower-asset/yii2-pjax": ">=2.0.1",
                 "cebe/markdown": "~1.0.0 | ~1.1.0",
@@ -1005,7 +1023,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-10-01 10:20:19"
+            "time": "2015-10-19 08:31:07"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -1013,12 +1031,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-bootstrap.git",
-                "reference": "49c2d45951dd2e98c6217aa071f655016c706846"
+                "reference": "7c6b244d9cfd58a5a10cad9853edc090ffd479b1"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/7c6b244d9cfd58a5a10cad9853edc090ffd479b1",
-                "reference": "49c2d45951dd2e98c6217aa071f655016c706846",
+                "reference": "7c6b244d9cfd58a5a10cad9853edc090ffd479b1",
                 "shasum": ""
             },
             "require": {
@@ -1055,7 +1073,7 @@
                 "bootstrap",
                 "yii2"
             ],
-            "time": "2015-09-29 10:36:47"
+            "time": "2015-10-15 16:22:38"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -1189,12 +1207,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "f34c8c30513eb8ba5cd73021c567a0030a6cf547"
+                "reference": "f6b2ebd8c462494083bfea6c087f79da36503930"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/9198c2f7668b9ee494959f8ff7f5f6e6f65379ca",
-                "reference": "f34c8c30513eb8ba5cd73021c567a0030a6cf547",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/f6b2ebd8c462494083bfea6c087f79da36503930",
+                "reference": "f6b2ebd8c462494083bfea6c087f79da36503930",
                 "shasum": ""
             },
             "require": {
@@ -1231,7 +1249,57 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2015-09-30 14:10:59"
+            "time": "2015-10-19 10:11:20"
+        },
+        {
+            "name": "machour/yii2-jquery-flot",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/machour/yii2-jquery-flot.git",
+                "reference": "ff18119a5e45eb2b47d0b1122bc68fe5a1e10010"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/machour/yii2-jquery-flot/zipball/ff18119a5e45eb2b47d0b1122bc68fe5a1e10010",
+                "reference": "ff18119a5e45eb2b47d0b1122bc68fe5a1e10010",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "asset-installer-paths": {
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "machour\\flot\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GNU GENERAL PUBLIC LICENSE"
+            ],
+            "authors": [
+                {
+                    "name": "Bogdan Burim",
+                    "email": "bgdn2007@ukr.net"
+                }
+            ],
+            "description": "jQuery Flot Charts extension for the Yii 2 framework",
+            "keywords": [
+                "chart",
+                "flot",
+                "jquery",
+                "yii"
+            ],
+            "time": "2015-10-19 18:10:11"
         },
         {
             "name": "phpspec/php-diff",
@@ -1412,12 +1480,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "fbd134b1cbc06fa149cc546cc98b4e701ba08cb0"
+                "reference": "3946123b429ef6aa95618a4159f3c0360054ddec"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/3946123b429ef6aa95618a4159f3c0360054ddec",
-                "reference": "fbd134b1cbc06fa149cc546cc98b4e701ba08cb0",
+                "reference": "3946123b429ef6aa95618a4159f3c0360054ddec",
                 "shasum": ""
             },
             "require": {
@@ -1457,14 +1525,15 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2015-09-29 10:49:23"
+            "time": "2015-10-07 14:54:57"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
         "machour/yii2-sparkline": 20,
-        "machour/yii2-adminlte-widgets": 20
+        "machour/yii2-adminlte-widgets": 20,
+        "machour/yii2-jquery-flot": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

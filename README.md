@@ -68,6 +68,10 @@ charts/chartjs.html
 
 * [2amigos/yii2-chartjs-widget](https://github.com/2amigos/yii2-chartjs-widget)
 
+charts/flot.html
+
+* [machour/yii2-jquery-flot](https://github.com/machour/yii2-jquery-flot)
+
 charts/inline.html
 
 * [machour/yii2-sparkline](https://github.com/machour/yii2-sparkline)
@@ -85,7 +89,6 @@ Add these pages :
 * layout/collapsed-sidebar.html
 * widgets.html
 * charts/morris.html
-* charts/flot.html
 * charts/inline.html
 * UI/icons.html
 * UI/buttons.html
@@ -110,6 +113,7 @@ Add these pages :
 * index2.html
 * UI/general.html
 * UI/timeline.html
+* charts/flot.html (the live chart + labels for donut)
 
 
 CONFIGURATION

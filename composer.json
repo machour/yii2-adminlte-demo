@@ -31,7 +31,8 @@
         "yiisoft/yii2-codeception": "*",
         "yiisoft/yii2-debug": "*",
         "yiisoft/yii2-gii": "*",
-        "yiisoft/yii2-faker": "*"
+        "yiisoft/yii2-faker": "*",
+        "machour/yii2-jquery-flot": "dev-master"
     },
     "config": {
         "process-timeout": 1800
