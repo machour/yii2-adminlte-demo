@@ -2,10 +2,12 @@
 
 /* @var $this app\components\View */
 
+use app\components\Html;
 use app\widgets\Box;
 use machour\adminlte\widgets\Timeline;
 use machour\sparkline\Sparkline;
 use yii\bootstrap\Carousel;
+use yii\bootstrap\Collapse;
 
 $this->title = 'General UI';
 $this->subTitle = 'Preview of UI elements';
@@ -14,8 +16,26 @@ $this->registerJsFile('js/pages/UI/general.js', ['depends' => 'yii\web\YiiAsset'
 
 ?>
 
+<?= Html::pageHeader('Alerts and Callouts') ?>
+
+
+<?= Html::pageHeader('AdminLTE Custom Tabs') ?>
+
+
+<?= Html::pageHeader('Progress Bars') ?>
+
+<?= Html::pageHeader('Bootstrap Accordion & Carousel') ?>
+
+
 <div class="row">
     <div class="col-md-6">
+        <?= Collapse::widget([]) ?>
+    </div>
+
+    <div class="col-md-6">
+
+
+
         <?= Box::begin([
             'type' => 'success',
             'noPadding' => true,
@@ -23,6 +43,7 @@ $this->registerJsFile('js/pages/UI/general.js', ['depends' => 'yii\web\YiiAsset'
                 'title' => 'Carousel',
             ]
         ]) ?>
+
         <?php
 
         echo Carousel::widget([
@@ -45,5 +66,8 @@ $this->registerJsFile('js/pages/UI/general.js', ['depends' => 'yii\web\YiiAsset'
         <?= Box::end() ?>
     </div>
 
+
 </div>
 
+
+<?= Html::pageHeader('Typography') ?>

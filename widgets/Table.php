@@ -5,7 +5,6 @@ namespace app\widgets;
 use app\components\Html;
 use yii\data\ArrayDataProvider;
 use yii\grid\GridView;
-use yii\helpers\ArrayHelper;
 
 class Table extends GridView
 {
