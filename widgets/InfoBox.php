@@ -2,9 +2,8 @@
 
 namespace app\widgets;
 
+use app\components\Html;
 use yii\base\Widget;
-use yii\helpers\ArrayHelper;
-use yii\helpers\Html;
 
 class InfoBox extends Widget {
 
@@ -22,7 +21,7 @@ class InfoBox extends Widget {
 
         echo Html::tag(
             'span',
-            Html::tag('i', null, ['class' => 'fa fa-' . $this->icon]),
+            Html::fa($this->icon, 'i'),
             ['class' => 'info-box-icon ' . ($this->bgFill ? '' : $this->bg)]
         );
 
