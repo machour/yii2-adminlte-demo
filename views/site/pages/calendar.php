@@ -11,6 +11,7 @@ $this->registerCssFile('/plugins/fullcalendar/fullcalendar.min.css');
 $this->registerCssFile('/plugins/fullcalendar/fullcalendar.print.css', ['media' => 'print']);
 $this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js');
 $this->registerJsFile('/plugins/fullcalendar/fullcalendar.min.js', ['depends' => 'yii\web\YiiAsset']);
+
 ?>
 
 <div class="row">
@@ -227,7 +228,7 @@ $this->registerJs(<<<SCRIPT
             event.html(val);
             $('#external-events').prepend(event);
 
-            //Add draggable funtionality
+            //Add draggable functionality
             ini_events(event);
 
             //Remove event from text input
@@ -236,6 +237,3 @@ $this->registerJs(<<<SCRIPT
 
 SCRIPT
 );
-
-
-?>
