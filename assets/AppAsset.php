@@ -24,6 +24,7 @@ class AppAsset extends AssetBundle
     ];
     public $depends = [
         'dmstr\web\AdminLteAsset',
+        'rmrevin\yii\ionicon\AssetBundle',
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
     ];

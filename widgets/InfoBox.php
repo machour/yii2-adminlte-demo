@@ -11,7 +11,7 @@ class InfoBox extends Widget {
     public $bgFill = false;
     public $text = 'Text';
     public $number = 0;
-    public $icon = 'question';
+    public $icon;
     public $progress;
     public $progressText;
 
@@ -19,9 +19,13 @@ class InfoBox extends Widget {
 
         echo Html::beginTag('div', ['class' => 'info-box ' . ($this->bgFill ? $this->bg : '')]);
 
+        if (!$this->icon) {
+            $this->icon = Html::fa('question', 'i');
+        }
+
         echo Html::tag(
             'span',
-            Html::fa($this->icon, 'i'),
+            $this->icon,
             ['class' => 'info-box-icon ' . ($this->bgFill ? '' : $this->bg)]
         );
 

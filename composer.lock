@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "886e4d5ea9e9c068a8d56a42148390ce",
+    "hash": "1134e76c28238d0069119fdcaaa21aa9",
     "packages": [
         {
             "name": "2amigos/yii2-chartjs-widget",
@@ -293,6 +293,47 @@
                 "jquery-plugin",
                 "range",
                 "slider"
+            ]
+        },
+        {
+            "name": "bower-asset/ionicons",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/driftyco/ionicons.git",
+                "reference": "ecb4b806831005c25b97ed9089fbb1d7dcc0879c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/driftyco/ionicons/zipball/ecb4b806831005c25b97ed9089fbb1d7dcc0879c",
+                "reference": "ecb4b806831005c25b97ed9089fbb1d7dcc0879c",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "css/ionicons.css",
+                    "fonts/*"
+                ],
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "builder",
+                    "node_modules",
+                    "bower_components",
+                    "test",
+                    "tests"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Ionicons - free and beautiful icons from the creators of Ionic Framework",
+            "keywords": [
+                "fonts",
+                "icon font",
+                "icons",
+                "ionic",
+                "web font"
             ]
         },
         {
@@ -869,6 +910,60 @@
             "time": "2015-08-15 16:50:16"
         },
         {
+            "name": "rmrevin/yii2-ionicon",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rmrevin/yii2-ionicon.git",
+                "reference": "3bf9cd7183c60570ec2b1b8d1177f23a8e9ea1ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rmrevin/yii2-ionicon/zipball/3bf9cd7183c60570ec2b1b8d1177f23a8e9ea1ee",
+                "reference": "3bf9cd7183c60570ec2b1b8d1177f23a8e9ea1ee",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/ionicons": "2.0.*",
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "2.0.*"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "asset-installer-paths": {
+                    "npm-asset-library": "vendor/npm",
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "rmrevin\\yii\\ionicon\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Revin Roman",
+                    "email": "roman@rmrevin.com",
+                    "homepage": "https://rmrevin.com/"
+                }
+            ],
+            "description": "Asset Bundle for Yii2 with Ionicon",
+            "keywords": [
+                "asset",
+                "bundle",
+                "font",
+                "icons",
+                "ionicon",
+                "social",
+                "yii"
+            ],
+            "time": "2015-09-08 21:06:25"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "5.x-dev",
             "source": {
@@ -967,12 +1062,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "ffcd52017ab9ff327e50cd9c72a9962b2d16c65f"
+                "reference": "16e71b7b2359e2feb76d58d3a7223bbf4dc78b45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/ffcd52017ab9ff327e50cd9c72a9962b2d16c65f",
-                "reference": "ffcd52017ab9ff327e50cd9c72a9962b2d16c65f",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/16e71b7b2359e2feb76d58d3a7223bbf4dc78b45",
+                "reference": "16e71b7b2359e2feb76d58d3a7223bbf4dc78b45",
                 "shasum": ""
             },
             "require": {
@@ -1048,7 +1143,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-10-20 07:39:18"
+            "time": "2015-10-21 14:10:35"
         },
         {
             "name": "yiisoft/yii2-bootstrap",

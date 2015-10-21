@@ -20,6 +20,7 @@
         "yiisoft/yii2-swiftmailer": "*",
         "almasaeed2010/adminlte": "~2.0",
         "rmrevin/yii2-fontawesome": "~2.9",
+        "rmrevin/yii2-ionicon": "1.0.0",
         "dmstr/yii2-adminlte-asset": "2.*",
         "machour/yii2-sparkline": "dev-master",
         "machour/yii2-adminlte-widgets": "dev-master",

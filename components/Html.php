@@ -26,4 +26,16 @@ class Html extends \yii\bootstrap\Html
         return self::icon($name, $options);
     }
 
+    public static function glyph($name, $tag = 'span')
+    {
+        $options = ['tag' => $tag];
+        return self::icon($name, $options);
+    }
+
+    public static function ion($name, $tag = 'span')
+    {
+        $options = ['prefix' => 'ion ion-', 'tag' => $tag];
+        return self::icon($name, $options);
+    }
+
 }
